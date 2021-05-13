@@ -38,9 +38,7 @@ Once all questions are complete, the game will end the game, and tell the user w
 
 ## GIF
 
-// A GIF of the working application
-
-![Name Of GIF](assets/gif-name.gif)
+![Flashcards GIF](assets/flashcards.gif)
 
 ## Future additions
 
