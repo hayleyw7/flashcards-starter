@@ -24,16 +24,17 @@ class Round {
     }
 
     turn.giveFeedback();
-    return turn.giveFeedback();
+      return turn.giveFeedback();
   }
 
   calculatePercentCorrect() {
     const correctGuesses = this.turns - this.incorrectGuesses.length;
-    const percentCorrect = correctGuesses * this.turns;
+    const percentCorrect = (correctGuesses / this.turns) * 100
     return percentCorrect;
   }
 
   endRound() {
+    console.log( `** Round over! ** You answered ` + this.calculatePercentCorrect() + `% of the questions correctly!`)
     return `** Round over! ** You answered ` + this.calculatePercentCorrect() + `% of the questions correctly!`
   }
 }
