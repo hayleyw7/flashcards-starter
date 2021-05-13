@@ -226,10 +226,10 @@ describe('Round', function() {
 
     const round = new Round(deck);
 
-    round.takeTurn('guess1')
-    round.takeTurn('guess2')
+    round.takeTurn('spleen')
+    round.takeTurn('listening to music')
 
-    expect(round.incorrectGuesses).to.deep.equal(['guess1', 'guess2']);
+    expect(round.incorrectGuesses).to.deep.equal([card2.id, card3.id]);
   });
 
   it('should provide feedback whether correct/incorrect', function() {
@@ -321,17 +321,15 @@ describe('Round', function() {
     );
 
     const deck = new Deck([card1, card2, card3]);
-
     const round = new Round(deck);
 
     round.takeTurn("wrong1");
     round.takeTurn("wrong2");
-    round.takeTurn("wrong3");
 
     round.turns = 10;
 
     expect(round.endRound()).to.equal(
-      '** Round over! ** You answered 70% of the questions correctly!'
+      '** Round over! ** You answered 80% of the questions correctly!'
     );
   });
 })
