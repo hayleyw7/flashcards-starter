@@ -29,7 +29,7 @@ class Game {
         prototypeQuestions[i].question,
         prototypeQuestions[i].answers,
         prototypeQuestions[i].correctAnswer);
-        newCardArray.push(newCard);
+        // newCardArray.push(newCard);
     }
 
     let deck = new Deck(prototypeQuestions);
