@@ -8,7 +8,7 @@ const Turn = require('../src/Turn');
 
 describe('Round', function() {
 
-    it('should be a function', function() {
+  it('should be a function', function() {
       
     expect(Round).to.be.a('function');
   });
@@ -143,7 +143,7 @@ describe('Round', function() {
 
     const round = new Round(deck);
 
-    expect(round.takeTurn('sea otter')).to.deep.equal('incorrect!');
+    expect(round.takeTurn('sea otter')).to.deep.equal('correct!');
   });
 
   it('should provide percent of correct guesses', function() {

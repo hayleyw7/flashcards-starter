@@ -18,10 +18,10 @@ describe('Game', function() {
 
   it('should keep track of currentRound, create Cards, put them in a deck, & create new round', function() {
 
-      function createCard(id, question, answers, correctAnswer) {
-    const card = new Card(id, question, answers, correctAnswer);
-    return card;
-  }
+    function createCard(id, question, answers, correctAnswer) {
+      const card = new Card(id, question, answers, correctAnswer);
+      return card;
+    }
 
     for (let i = 0; i < prototypeQuestions.length; i++) {
 
@@ -45,6 +45,6 @@ describe('Game', function() {
 
     game.start();
 
-      expect(game.currentRound).to.deep.equal(round);
+    expect(game.currentRound).to.deep.equal(round);
   });
 });
