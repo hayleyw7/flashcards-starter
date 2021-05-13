@@ -4,9 +4,9 @@ This is a program that can be run in a console that simulates a set of flash car
 
 ## Motivation and rubric
 
-This project was completed as a final project at Turing School of Software & Design during Module 2.
+This project was completed as a project at Turing School of Software & Design during Module 2.
 
-https://frontend.turing.edu/projects/flash-cards.html 
+[The rubric is linked here.](https://frontend.turing.edu/projects/flash-cards.html)
 
 ## Reflections
 
@@ -28,7 +28,7 @@ Code stored on GitHub
 
 ## Install/Setup Instructions
 
-The code is available at https://github.com/hayleyw7/flashcards-starter.
+The code is available at on GitHub [here](https://github.com/hayleyw7/flashcards-starter).
 
 To use, clone the repo onto your local machine, open the terminal, navigate to the file, and enter "node index.js".
 
@@ -40,11 +40,7 @@ Once all questions are complete, the game will end the game, and tell the user w
 
 // A GIF of the working application
 
-![Home](assets/ss-home.png)
-![Rock-Paper-Scissors Game](assets/ss-rps-game.png)
-![Rock-Paper-Scissors Selections](assets/ss-rps-selections.png)
-![Magic: The Gathering Game](assets/ss-mtg-game.png)
-![Magic: The Gathering Selections](assets/ss-mtg-selections.png)
+![Name Of GIF](assets/gif-name.gif)
 
 ## Future additions
 
