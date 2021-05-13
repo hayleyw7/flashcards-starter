@@ -12,7 +12,7 @@ describe('Card', function() {
   it('should be an instance of Card', function() {
     const card = new Card();
     expect(card).to.be.an.instanceof(Card);
-  }); 
+  });
 
   it('should store a question', function() {
     const card = new Card(
