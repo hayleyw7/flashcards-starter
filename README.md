@@ -40,7 +40,7 @@ Once all questions are complete, the game will end the game, and tell the user w
 
 ![Flashcards GIF](assets/flashcards.gif)
 
-## Future additions
+## Future Additions
 
 * The user will need to answer correctly 90% of the time, or they will have to go through the cards again.
 
