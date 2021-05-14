@@ -8,32 +8,15 @@ const Deck = require('./Deck');
 class Game {
   constructor() {
     this.currentRound;
-    this.cards = [];
-  }
-
-  createCard(id, question, answers, correctAnswer) {
-    const card = new Card(id, question, answers, correctAnswer);
-    return card;
   }
 
   start() {
-    for (let i = 0; i < prototypeQuestions.length; i++) {
-
-      let newCardArray = [];
-
-      const newCard = this.createCard(
-        prototypeQuestions[i].id,
-        prototypeQuestions[i].question,
-        prototypeQuestions[i].answers,
-        prototypeQuestions[i].correctAnswer
-      );
-      newCardArray.push(newCard);
-    }
-
-    let deck = new Deck(prototypeQuestions);
+    const newCards = prototypeQuestions.map((card) => {
+    return new Card(card.id, card.question, card.answers, card.correctAnswer);
+  })
+    let deck = new Deck(newCards);
     let round = new Round(deck);
     this.currentRound = round;
-    this.cards = this.currentRound.deck.cards;
     this.printMessage(deck, this.currentRound);
     this.printQuestion(round);
   }
