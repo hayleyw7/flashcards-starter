@@ -187,8 +187,8 @@ describe('Round', function() {
     const deck = new Deck([card1, card2, card3]);
     const round = new Round(deck);
 
-    round.takeTurn('guess1')
-    round.takeTurn('guess2')
+    round.takeTurn('guess1');
+    round.takeTurn('guess2');
 
     expect(round.returnCurrentCard()).to.deep.equal(card3);
   });
@@ -219,8 +219,8 @@ describe('Round', function() {
     const deck = new Deck([card1, card2, card3]);
     const round = new Round(deck);
 
-    round.takeTurn('spleen')
-    round.takeTurn('listening to music')
+    round.takeTurn('spleen');
+    round.takeTurn('listening to music');
 
     expect(round.incorrectGuesses).to.deep.equal([card2.id, card3.id]);
   });
@@ -322,4 +322,4 @@ describe('Round', function() {
       '** Round over! ** You answered 80% of the questions correctly!'
     );
   });
-})
+});
