@@ -17,18 +17,16 @@ class Turn {
       return true;
     } else {
       return false;
-    }
-  }
+    };
+  };
 
   giveFeedback() {
     if (!this.evaluateGuess()) {
       return `incorrect!`;
     } else {
       return `correct!`;
-    }
-  }
-}
+    };
+  };
+};
 
 module.exports = Turn;
-
-// npm test test/Turn-test.js
