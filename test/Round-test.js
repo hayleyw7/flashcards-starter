@@ -35,7 +35,6 @@ describe('Round', function() {
     );
 
     const deck = new Deck([card1, card2, card3]);
-
     const round = new Round(deck);
 
     expect(round).to.be.an.instanceOf(Round);
@@ -65,7 +64,6 @@ describe('Round', function() {
     );
 
     const deck = new Deck([card1, card2, card3]);
-
     const round = new Round(deck);
 
     round.takeTurn("x")
@@ -97,7 +95,6 @@ describe('Round', function() {
     );
 
     const deck = new Deck([card1, card2, card3]);
-
     const round = new Round(deck);
 
     expect(round.turns).to.equal(0);
@@ -127,7 +124,6 @@ describe('Round', function() {
     );
 
     const deck = new Deck([card1, card2, card3]);
-
     const round = new Round(deck);
 
     expect(round.incorrectGuesses).to.deep.equal([]);
@@ -157,7 +153,6 @@ describe('Round', function() {
     );
 
     const deck = new Deck([card1, card2, card3]);
-
     const round = new Round(deck);
 
     round.takeTurn('sea otter');
@@ -190,7 +185,6 @@ describe('Round', function() {
     );
 
     const deck = new Deck([card1, card2, card3]);
-
     const round = new Round(deck);
 
     round.takeTurn('guess1')
@@ -223,7 +217,6 @@ describe('Round', function() {
     );
 
     const deck = new Deck([card1, card2, card3]);
-
     const round = new Round(deck);
 
     round.takeTurn('spleen')
@@ -256,7 +249,6 @@ describe('Round', function() {
     );
 
     const deck = new Deck([card1, card2, card3]);
-
     const round = new Round(deck);
 
     expect(round.takeTurn('sea otter')).to.deep.equal('correct!');
@@ -286,11 +278,9 @@ describe('Round', function() {
     );
 
     const deck = new Deck([card1, card2, card3]);
-
     const round = new Round(deck);
 
     round.incorrectGuesses = ["wrong1", "wrong2", "wrong3"];
-
     round.turns = 10;
 
     expect(round.calculatePercentCorrect()).to.equal(70);
