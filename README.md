@@ -16,7 +16,7 @@ Getting a large number classes to work together was also a learning experience, 
 
 ## Languages
 
-Written in JavaScript
+Written in JavaScript (Mocha, Chai)
 
 ## Technology used
 
