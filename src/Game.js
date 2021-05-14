@@ -30,9 +30,7 @@ class Game {
 
   printQuestion(round) {
     util.main(round);
-  }
-}
+  };
+};
 
 module.exports = Game;
-
-// npm test test/Game-test.js  
