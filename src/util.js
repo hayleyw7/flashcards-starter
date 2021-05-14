@@ -9,9 +9,9 @@ const Deck = require('./Deck');
 const Turn = require('./Turn');
 
 const genList = (round) => {
-  let card = round.returnCurrentCard();
+  const card = round.returnCurrentCard();
   
-  let choices = card.answers.map((answer, index) => {
+  const choices = card.answers.map((answer, index) => {
     return {
       key: index,
       value: answer
