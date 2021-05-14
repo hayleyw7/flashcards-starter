@@ -8,34 +8,17 @@ const Deck = require('./Deck');
 class Game {
   constructor() {
     this.currentRound;
-    this.cards = [];
-  }
-
-  createCard(id, question, answers, correctAnswer) {
-    const card = new Card(id, question, answers, correctAnswer);
-    return card;
   }
 
   start() {
-    for (let i = 0; i < prototypeQuestions.length; i++) {
-
-      let newCardArray = [];
-
-      const newCard = this.createCard(
-        prototypeQuestions[i].id,
-        prototypeQuestions[i].question,
-        prototypeQuestions[i].answers,
-        prototypeQuestions[i].correctAnswer
-      );
-      newCardArray.push(newCard);
-    }
-
-    let deck = new Deck(prototypeQuestions);
-    let round = new Round(deck);
-    this.currentRound = round;
-    this.cards = this.currentRound.deck.cards;
-    this.printMessage(deck, this.currentRound);
-    this.printQuestion(round);
+    const newCards = prototypeQuestions.map((card) => {
+    return new Card(card.id, card.question, card.answers, card.correctAnswer);
+  })
+    this.deck = new Deck(newCards);
+    this.round = new Round(this.deck);
+    this.currentRound = this.round;
+    this.printMessage(this.deck, this.currentRound);
+    this.printQuestion(this.round);
   }
 
   printMessage(deck, round) {
@@ -47,9 +30,7 @@ class Game {
 
   printQuestion(round) {
     util.main(round);
-  }
-}
+  };
+};
 
 module.exports = Game;
-
-// npm test test/Game-test.js  
