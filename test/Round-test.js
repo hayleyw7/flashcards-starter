@@ -4,14 +4,14 @@ const Card = require('../src/Card');
 const Round = require('../src/Round');
 const Deck = require('../src/Deck');
 
-describe('Round', function() {
+describe('Round', () => {
 
-  it('should be a function', function() {
+  it('should be a function', () => {
       
     expect(Round).to.be.a('function');
   });
 
-  it('should be an instance of Round', function() {
+  it('should be an instance of Round', () => {
 
     const card1 = new Card(
       1,
@@ -40,7 +40,7 @@ describe('Round', function() {
     expect(round).to.be.an.instanceOf(Round);
   }); 
 
-  it('should return current card being played', function() {
+  it('should return current card being played', () => {
     
     const card1 = new Card(
       1,
@@ -71,7 +71,7 @@ describe('Round', function() {
     expect(round.returnCurrentCard()).to.equal(card2);
   });
 
-  it('should start at 0 turns', function() {
+  it('should start at 0 turns', () => {
     
     const card1 = new Card(
       1,
@@ -100,7 +100,7 @@ describe('Round', function() {
     expect(round.turns).to.equal(0);
   });
 
-  it('should start with no incorrect guesses', function() {
+  it('should start with no incorrect guesses', () => {
     
     const card1 = new Card(
       1,
@@ -129,7 +129,7 @@ describe('Round', function() {
     expect(round.incorrectGuesses).to.deep.equal([]);
   });
 
-  it('should update turn count', function() {
+  it('should update turn count', () => {
     
     const card1 = new Card(
       1,
@@ -161,7 +161,7 @@ describe('Round', function() {
     expect(round.turns).to.equal(2);
   });
 
-  it('should make next card become current card', function() {
+  it('should make next card become current card', () => {
 
     const card1 = new Card(
       1,
@@ -193,7 +193,7 @@ describe('Round', function() {
     expect(round.returnCurrentCard()).to.deep.equal(card3);
   });
 
-  it('should store incorrect guesses', function() {
+  it('should store incorrect guesses', () => {
 
     const card1 = new Card(
       1,
@@ -225,7 +225,7 @@ describe('Round', function() {
     expect(round.incorrectGuesses).to.deep.equal([card2.id, card3.id]);
   });
 
-  it('should provide feedback whether correct/incorrect', function() {
+  it('should provide feedback whether correct/incorrect', () => {
     
     const card1 = new Card(
       1,
@@ -254,7 +254,7 @@ describe('Round', function() {
     expect(round.takeTurn('sea otter')).to.deep.equal('correct!');
   });
 
-  it('should provide percent of correct guesses', function() {
+  it('should provide percent of correct guesses', () => {
 
     const card1 = new Card(
       1,
@@ -287,7 +287,7 @@ describe('Round', function() {
 
   });
 
-  it('should notify when round over', function() {
+  it('should notify when round over', () => {
 
     const card1 = new Card(
       1,
