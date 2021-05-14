@@ -30,7 +30,7 @@ Code stored on GitHub
 
 The code is available at on GitHub [here](https://github.com/hayleyw7/flashcards-starter).
 
-To use, clone the repo onto your local machine, open the terminal, navigate to the file, and enter "node index.js".
+To use, clone the repo onto your local machine, open the terminal, navigate to the file, and enter `node index.js`.
 
 The user starts is presented with a flashcard, which consists of a question and three possible answers. They must select an answer by using keyboard arrows and then pressing "Enter" or "Return" on their keyboard. The user will be then told if their answer was correct or incorrect.
 
